@@ -120,7 +120,6 @@ void print_letter_guessed(char *letter_guess_ptr, unsigned short letter_guess_le
     printf("\n");
 }
 
-
 void print_game_state(game_t *game){
     printf("--------- Turn %i ---------\n", game->turn_count);
     printf("Lifes remaining: %i\n", game->life_count);

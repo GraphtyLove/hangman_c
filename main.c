@@ -1,4 +1,5 @@
-#include "game.c"
+#include "game.h"
+#include <string.h>
 
 int main(){
     game_t *game = create_new_game(3);

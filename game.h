@@ -1,7 +1,9 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include <stdio.h>
 
 typedef struct Game {
-    // Actual string
     char *word_to_guess;
     unsigned long word_to_guess_len;
 
@@ -14,3 +16,10 @@ typedef struct Game {
     unsigned short life_count;
     unsigned short turn_count;
 } game_t;
+
+game_t *create_new_game(unsigned short max_life);
+void play_turn(game_t *game);
+void print_game_state(game_t *game);
+void destroy_game(game_t *game);
+
+#endif // GAME_H

@@ -9,7 +9,14 @@ The goal was just to explore the language.
 You need GCC to be installed.
 
 ```bash
-gcc main.c -o main && ./main
+gcc main.c -o main;
+./main;
+```
+
+or with Make:
+```bash
+make;
+./game;
 ```
 
 ## Constraints
