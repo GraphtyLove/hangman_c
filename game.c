@@ -74,7 +74,7 @@ char get_letter_from_user() {
         } 
         else {
             // Clear the input buffer on invalid input
-            while (getchar() != '\n' && feof(stdin));
+            while (getchar() != '\n' && !feof(stdin));
             printf("Invalid input. Please enter a letter: ");
         }
     }
