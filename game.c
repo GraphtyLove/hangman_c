@@ -65,11 +65,16 @@ char get_letter_from_user() {
             if (isalpha(input)) {
                 break;
             } else {
+                while (getchar() != '\n' && !feof(stdin));
                 printf("Invalid input. Please enter a letter: ");
             }
-        } else {
+        } else if(feof(stdin)) {
+            clearerr(stdin);
+            printf("\nInvalid input. Please enter a letter: ");
+        } 
+        else {
             // Clear the input buffer on invalid input
-            while (getchar() != '\n');
+            while (getchar() != '\n' && feof(stdin));
             printf("Invalid input. Please enter a letter: ");
         }
     }
